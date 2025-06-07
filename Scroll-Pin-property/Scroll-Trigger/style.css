@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html , body{
+    height: 100%;
+    width: 100%;
+}
+#page1{
+    height: 100%;
+    width: 100%;
+    background-color: #0B1D51;
+}
+#page2{
+    height: 100%;
+    width: 100%;
+    background-color: #954C2E;
+}
+#page2 img{
+    height: 100%;
+    width: 30%;
+    object-fit: cover;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+#page3{
+    height: 100%;
+    width: 100%;
+    background-color: #EFE4D2;
+}
