@@ -1,5 +1,5 @@
 gsap.to("#page2 h1", {
-    Transform: "translateX(-125%)",
+    transform: "translateX(-125%)",
     scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
