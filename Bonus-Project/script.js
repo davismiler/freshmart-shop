@@ -34,14 +34,14 @@ function textSplitting() {
         var clutter = "";
         var h1Text = elem.textContent;
         console.log(h1Text);
-        var splittedText = h1Text.split("");
+        var splittedText = h1Text.split(""); 
         splittedText.forEach(function (e) {
             clutter += `<span>${e}</span>`;
         });
         elem.innerHTML = clutter;
     });
 }
-   
+
 function gsapAnimation() {
     gsap.to("#page2 h1 span", {
         color: "red",
