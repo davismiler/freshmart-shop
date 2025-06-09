@@ -41,7 +41,7 @@ function textSplitting() {
         elem.innerHTML = clutter;
     });
 }
-
+ 
 function gsapAnimation() {
     gsap.to("#page2 h1 span", {
         color: "red",
