@@ -36,7 +36,7 @@ function textSplitting() {
         console.log(h1Text);
         var splittedText = h1Text.split("");
         splittedText.forEach(function (e) {
-            clutter += `<span>${e}</span>`; 
+            clutter += `<span>${e}</span>`;  
         });
         elem.innerHTML = clutter;
     });
