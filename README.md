@@ -1,4 +1,4 @@
-# Animation-with-Scrolltrigger
+# Animation-with-Scrolltrigger...
 
 This repository houses various animation projects and experiments, primarily leveraging the ScrollTrigger library for interactive, scroll-driven animations. Each folder represents a distinct project or a specific animation concept.
 
