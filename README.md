@@ -1,30 +1,12 @@
-# Animation-with-Scrolltrigger.
+# React + Vite
 
-This repository houses various animation projects and experiments, primarily leveraging the ScrollTrigger library for interactive, scroll-driven animations. Each folder represents a distinct project or a specific animation concept.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Projects
+Currently, two official plugins are available:
 
-* **Bonus-Project**
-* **Locomotive-Animation-1**
-* **Locomotive-Animation-2**
-* **Scroll-Trigger-Pin-Property**
-* **Scroll-Trigger-Pin-property-2**
-* **Scroll-Trigger**
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Getting Started
+## Expanding the ESLint configuration
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/adityadomle/Animation-with-Scrolltrigger.git](https://github.com/adityadomle/Animation-with-Scrolltrigger.git)
-    ```
-2.  **Navigate to a project directory:**
-    ```bash
-    cd Animation-with-Scrolltrigger/Locomotive-Animation-1
-    ```
-3.  **Install dependencies (if any):**
-    ```bash
-    npm install
-    # or
-    yarn install
-    ```
-4.  **Open `index.html` in your browser.**
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
