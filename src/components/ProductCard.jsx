@@ -22,20 +22,20 @@ const ProductCard = ({product}) => {
     }
   }
   return (
-    <div className='overflow-hidden transition-all hover:shadow-md border border-gray-200 rounded-lg'>
+    <div className='overflow-hidden transition-all hover:shadow-lg border border-white/10 rounded-lg glass-card glowing-card'>
       <div>
-        <div className='aspect-square relative bg-gray-200'>
+        <div className='aspect-square relative bg-gray-800/50'>
             <img src={product.image} alt={product.name} className='object-cover w-full h-[195px]'/>
         </div>
-        <div className='px-3'>
-            <p className='text-sm mt-1 text-gray-500'>{product.category}</p>
-            <h3 className='font-semibold text-sm mt-1 h-[40px] text-gray-800 line-clamp-2'>{product.name}</h3>
-            <p className='text-sm text-gray-600 mt-1'>{product.quantity}</p>
-            <p className='font-bold mt-1 text-gray-700'>₹{product.price?.toFixed(2)}</p>
+        <div className='px-3 py-2'>
+            <p className='text-sm mt-1 text-gray-400'>{product.category}</p>
+            <h3 className='font-semibold text-sm mt-1 h-[40px] text-white line-clamp-2'>{product.name}</h3>
+            <p className='text-sm text-gray-400 mt-1'>{product.quantity}</p>
+            <p className='font-bold mt-1 text-white'>₹{product.price?.toFixed(2)}</p>
         </div>
       </div>
       <div className='p-4 pt-1'>
-        <button onClick={()=>addToCart(product)} className='w-full bg-green-600 hover:bg-green-700 text-white flex items-center justify-center py-2 rounded-lg cursor-pointer'><ShoppingCart className='w-4 h-4 mr-2'/> Add to Cart</button>
+        <button onClick={()=>addToCart(product)} className='w-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 hover:opacity-90 text-white flex items-center justify-center py-2 rounded-lg cursor-pointer transition-all duration-300 shadow-lg shadow-purple-500/30'><ShoppingCart className='w-4 h-4 mr-2'/> Add to Cart</button>
       </div>
     </div>
   )

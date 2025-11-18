@@ -9,18 +9,27 @@ import Contact from './Pages/Contact'
 
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/shop' element={<Shop/>}></Route>
-          <Route path='/about' element={<About/>}></Route>
-          <Route path='/contact' element={<Contact/>}></Route>
-        </Routes>
-        <Footer />
-      </BrowserRouter>
-    </>
+    <div className="min-h-screen w-full font-sans relative">
+      {/* Dark Horizon Glow - Base Background Layer */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #0d1a36 100%)",
+        }}
+      />
+      <div className="relative z-10">
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Home/>}></Route>
+            <Route path='/shop' element={<Shop/>}></Route>
+            <Route path='/about' element={<About/>}></Route>
+            <Route path='/contact' element={<Contact/>}></Route>
+          </Routes>
+          <Footer />
+        </BrowserRouter>
+      </div>
+    </div>
   )
 }
 

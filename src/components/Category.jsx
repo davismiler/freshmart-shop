@@ -36,9 +36,9 @@ const categoryItems = [
 
 const Category = () => {
   return (
-    <section className='py-12 bg-gray-50 px-6 md:px-0'>
+    <section className='py-12 px-6 md:px-0'>
       <div className='max-w-6xl mx-auto'>
-        <h2 className='text-3xl font-bold text-center mb-8'>Shop by Categroy</h2>
+        <h2 className='section-title'>Shop by Category</h2>
         <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4'>
             {
                 categoryItems.map((item, index)=>{

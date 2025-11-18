@@ -20,23 +20,28 @@ const Navbar = () => {
   isOpen ? document.body.style.overflow = "hidden": document.body.style.overflow = "auto"
   return (
     <div>
-      <div className='mx-auto flex justify-between items-center px-6 py-3 fixed top-0 z-20 bg-green-100 w-full border border-gray-100 shadow-xl lg:px-[180px]'>
+      <div className='mx-auto flex justify-between items-center px-6 py-3 fixed top-0 z-20 bg-gray-900/30 backdrop-blur-md w-full border-b border-white/10 shadow-xl lg:px-[180px]'>
            {/* logo section */}
-           <Link to={'/'}><img src={Logo} alt="" className='md:w-52 w-40'/></Link>
+           <Link to={'/'} className='relative group'>
+             <div className="absolute inset-0 z-0 pointer-events-none">
+               <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-900 rounded-full blur-2xl opacity-60 group-hover:opacity-90 transition-all duration-500"></div>
+             </div>
+             <img src={Logo} alt="" className='md:w-52 w-40 relative z-10'/>
+           </Link>
            {/* menu section */}
            <nav className='flex gap-5'>
             <ul className='text-xl font-semibold md:flex items-center gap-7 hidden'>
-                <Link to={'/'}><li>Home</li></Link>
-                <Link to={'/shop'}><li>Shop</li></Link>
-                <Link to={'/about'}><li>About</li></Link>
-                <Link to={'/contact'}><li>Contact</li></Link>
+                <Link to={'/'}><li className='text-gray-300 hover:text-white transition-colors'>Home</li></Link>
+                <Link to={'/shop'}><li className='text-gray-300 hover:text-white transition-colors'>Shop</li></Link>
+                <Link to={'/about'}><li className='text-gray-300 hover:text-white transition-colors'>About</li></Link>
+                <Link to={'/contact'}><li className='text-gray-300 hover:text-white transition-colors'>Contact</li></Link>
             </ul>
-            <Link className='relative' onClick={()=>setIsOpen(true)}>
-            <ShoppingCart className='w-6 h-6'/>
-            <span className='absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>{cart.length}</span>
+            <Link className='relative group' onClick={()=>setIsOpen(true)}>
+            <ShoppingCart className='w-6 h-6 text-white group-hover:text-blue-400 transition-colors'/>
+            <span className='absolute -top-2 -right-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center'>{cart.length}</span>
             </Link>
            {
-            isNavOpen ? <HiMenuAlt3 className='h-7 w-7 md:hidden' onClick={toggleNav}/>:<HiMenuAlt1 className='h-7 w-7 md:hidden' onClick={toggleNav}/>
+            isNavOpen ? <HiMenuAlt3 className='h-7 w-7 md:hidden text-white' onClick={toggleNav}/>:<HiMenuAlt1 className='h-7 w-7 md:hidden text-white' onClick={toggleNav}/>
            }
            </nav>
       </div>
@@ -45,7 +50,7 @@ const Navbar = () => {
       }
       {
         isOpen && (
-          <div className='fixed top-0 left-0 w-full h-full bg-black/70 z-40' onClick={()=>setIsOpen(false)}></div>
+          <div className='fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-sm z-40' onClick={()=>setIsOpen(false)}></div>
         )
       }
      <CartComp isOpen={isOpen} onClose={onClose}/>
